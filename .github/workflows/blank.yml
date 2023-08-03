@@ -8,5 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+
       - name: Run a one-line script
-        run: ./calendar.sh url.csv
+        run: ls
+
+      - name: Run a one-line script
+        run: bash calendar.sh url.csv
