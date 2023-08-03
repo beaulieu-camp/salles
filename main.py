@@ -1,5 +1,6 @@
 import requests
 import datetime
+import json
 
 with open("./url.csv") as file:
     salles = file.read().split("\n")
@@ -48,7 +49,7 @@ for item in salles :
 
     liste.sort()
     with open("./out/"+salle_code+".json","w+") as file:
-        file.write(str(liste))
+        file.write(json.dumps(liste))
 
 with open("./out/salles.json","w+") as file:
-    file.write(str(salles_liste))
+    file.write(json.dumps(salles_liste))
