@@ -4,7 +4,7 @@ import json
 
 with open("./url.csv") as file:
     salles = file.read().split("\n")
-
+    
 def to_date(char):
     year = int(char[0:4])
     month = int(char[4:6])
