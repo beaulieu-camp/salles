@@ -12,8 +12,8 @@ jobs:
       - name: Run a one-line script
         run: ls
 
-      - name: Run a one-line script
-        run: bash calendar.sh url.csv
+      # - name: Run a one-line script
+      #  run: bash calendar.sh url.csv
 
       - name: Create Draft Release
         id: create_release
