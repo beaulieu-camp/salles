@@ -26,6 +26,7 @@ for item in salles :
     salles_liste.append([batiment,salle,salle_code])
 
     req = requests.get(url)
+    if req.status_code != 200 : raise Exception("Api Univ Pété") 
 
     liste = []
 
