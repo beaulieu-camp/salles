@@ -1,6 +1,6 @@
 # api
 
-Lance une action à 7h et 12h UTC pour actualiser les plannings dans le csv.
+Lance une action à 5h et 10h UTC pour actualiser les plannings dans le csv.
 
 ##
 
