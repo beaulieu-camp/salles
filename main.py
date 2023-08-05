@@ -33,8 +33,13 @@ for item in salles :
     DTSTART=""
     DTEND=""
     SUMMARY=""
+    
+    text = req.text
+    text = text.replace("\r","\n")
+    text = text.replace("\n ","")
+    text = text.split("\n")
 
-    for item in req.text.split("\n"):
+    for item in text:
         line = item.split(":")
         code = line[0]
         value = ":".join(line[1:])
@@ -47,9 +52,12 @@ for item in salles :
             SUMMARY=value
         elif code == "END" and value == "VEVENT":
             liste.append([DTSTART , DTEND , SUMMARY])
+    print(liste[0],salle_code)
 
     liste.sort()
     with open("./out/"+salle_code+".json","w+") as file:
+        print(liste[0],salle_code)
+
         file.write(json.dumps(liste))
 
 with open("./out/salles.json","w+") as file:
