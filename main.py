@@ -15,7 +15,7 @@ def to_date(char):
     date = datetime.datetime(year, month, day, hour, minute, sec)
     return int(date.timestamp())
 
-salles_liste = []
+salles_liste = {}
 
 for item in salles :
     if item == "" : break
@@ -23,7 +23,7 @@ for item in salles :
     batiment,salle,url = item.split(",")
     salle_code = batiment.replace(" ","_") + "_" + salle.replace(" ","_")
 
-    salles_liste.append([batiment,salle,salle_code])
+    salles_liste[salle_code] = {"batiment":batiment,"salle":salle}
 
     req = requests.get(url)
     if req.status_code != 200 : raise Exception("Api Univ Pété") 
