@@ -96,9 +96,7 @@ with open("./out/salles.json","w+") as file:
         }
     file.write(json.dumps(keyDic))
 
-for key in liste :
-    value = liste[key]
-
+for key,value in liste.items() :
     value.sort()
     with open("./out/"+key+".json","w+") as file:
 
