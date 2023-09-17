@@ -17,9 +17,11 @@ def to_date(char):
 
 def formatKey(key):
     liste = key.split(" - ")
-
-    matches = regex.findall(key)[0]
-    
+    print(key)
+    try:
+        matches = regex.findall(key)[0]
+    except:
+        return "unknown_building"
     bat = matches[0]
     code = "Salle"
     salle = matches[1]
