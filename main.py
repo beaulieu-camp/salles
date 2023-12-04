@@ -3,6 +3,7 @@ import datetime
 import json
 import re
 
+
 regex = re.compile( r"[A-z](.*) - (([A-z]?[-0-9]+)|([A-zÀ-ÿ ]*))" )
 
 def to_date(char):
